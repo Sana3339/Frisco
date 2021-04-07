@@ -37,11 +37,19 @@ function Neighborhood() {
  function Login(props) {
    return (
      <div>
+       <p>Log In</p>
        Username:
        <input type="text"></input>
        Password:
        <input type="text"></input>
        <button> Login </button>
+
+       <p>Create Account</p>
+       Username:
+       <input type="text"></input>
+       Password:
+       <input type="text"></input>
+       <button> Submit </button>
      </div>
    );
  }

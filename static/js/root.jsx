@@ -8,12 +8,31 @@ const Redirect = ReactRouterDOM.Redirect;
 //"use strict";
 
 function Homepage() {
-  return <div> Welcome to my site!</div>
+  return (
+  <div> 
+    Frisco
+    <p>Discover which San Francisco neighborhood is right for you</p>
+    <button>Explore</button>
+  </div>
+  );
+}
+
+function MapSearch() {
+  return <div> Click on a marker to learn about the neighborhood:  </div>
 };
 
-function About() {
-  return <div> A tiny react demo site </div>
-};
+function Neighborhood() {
+  return (
+    <div> 
+      Neighborhood Name
+      <p>Details</p>
+      <div>Images</div>
+      <button>Find Housing</button>
+      <button>Post Housing</button>
+      <button>Back</button>
+    </div>
+    );
+  }
 
  function Login(props) {
    return (
@@ -114,7 +133,10 @@ function App() {
               <Link to="/"> Home </Link>
             </li>
             <li>
-              <Link to="/about"> About </Link>
+              <Link to="/map-search"> Map Search </Link>
+            </li>
+            <li>
+              <Link to="/neighborhood-details"> Neighborhood Details </Link>
             </li>
             <li>
               <Link to="/login"> Login </Link>
@@ -128,8 +150,11 @@ function App() {
           </ul>
         </nav>
         <Switch>
-          <Route path="/about">
-            <About />
+          <Route path="/map-search">
+            <MapSearch />
+          </Route>
+          <Route path ="/neighborhood-details">
+            <Neighborhood />
           </Route>
           <Route path ="/create-post">
             <CreatePost />
